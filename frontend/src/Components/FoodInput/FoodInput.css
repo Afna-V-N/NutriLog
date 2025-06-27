@@ -11,20 +11,20 @@
 
 
 
-/* === MAIN FORM CONTAINER === */
+
 .food-input-container {
-  width: 90%; /* Responsive on smaller screens */
-  max-width: 500px; /* Reduced width for elegance */
-  margin: 2rem auto; /* Top spacing and center horizontally */
+  width: 90%; 
+  max-width: 500px; 
+  margin: 2rem auto; 
   max-height: 200pxS;
-  background: rgba(255, 255, 255, 0.9); /* Softer glassmorphism */
+  background: rgba(255, 255, 255, 0.9); 
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   
-  border-radius: 24px; /* Smoother corners */
+  border-radius: 24px; 
   padding: 2.5rem 3rem;
   
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* Softer depth */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); 
   border: 1px solid rgba(255, 255, 255, 0.5);
   
   text-align: center;
@@ -33,28 +33,28 @@
 }
 
 
-/* === TITLE STYLING === */
+
 .food-input-container h2 {
-  font-size: 2rem;                    /* Bigger font */
-  font-weight: 600;                   /* Semi-bold */
-  color: #2c3e50;                     /* Dark gray text */
-  margin: 0 0 1.5rem 0;               /* Bottom spacing */
+  font-size: 2rem;                    
+  font-weight: 600;                   
+  color: #2c3e50;                     
+  margin: 0 0 1.5rem 0;              
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;                       /* Emoji gap */
+  gap: 0.75rem;                       
 }
 
-/* === SEARCH BAR STYLING === */
+
 .input-group {
-  display: flex;                      /* Horizontal layout for input and button */
+  display: flex;                      
   
 }
 .input-group input[type="text"] {
-  flex-grow: 1;                       /* Expand to available space */
+  flex-grow: 1;                       
   padding: 0.9rem 1.2rem;
   border: 1px solid #ccc;
-  border-radius: 8px 0 0 8px;         /* Rounded only on left side */
+  border-radius: 8px 0 0 8px;         
   font-size: 1rem;
   outline: none;
   transition: all 0.2s ease;
@@ -68,7 +68,7 @@
   background-color: #2ecc71;
   color: white;
   border: none;
-  border-radius: 0 8px 8px 0;         /* Rounded only on right side */
+  border-radius: 0 8px 8px 0;         
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
@@ -78,7 +78,7 @@
   background-color: #27ae60;
 }
 
-/* === OR DIVIDER === */
+
 .or-divider {
   margin: 0.5rem 0;
   color: #7f8c8d;
@@ -87,7 +87,7 @@
   font-size: 0.9rem;
 }
 
-/* === CUSTOM FILE UPLOAD BUTTON === */
+
 input[type="file"] {
   display: none;
 }
@@ -150,7 +150,7 @@ input[type="file"] {
 }
 .result-image {
   width: 100%;
-  height: 250px;          /* 🔁 Change this to a larger value */
+  height: 250px;         
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 1rem;

@@ -1,6 +1,3 @@
-/* ===================================================================
-   Modern CSS for DailyLog.js with STICKY HEADER
-   =================================================================== */
 
 .page-container {
   width: 100%;
@@ -8,9 +5,9 @@
   box-sizing: border-box;
 }
 
-/* --- Main Card --- */
+
 .log-container {
- max-width: 900px; /* CHANGED FROM 800px to 900px */
+ max-width: 900px; 
   width: 200%;
   
   backdrop-filter: blur(10px);
@@ -24,10 +21,10 @@
  
 }
 
-/* --- STICKY HEADER --- */
+
 .log-header {
   padding: 2rem 2.5rem 1.5rem;
-  flex-shrink: 0; /* Prevents the header from shrinking */
+  flex-shrink: 0; 
 }
 
 .log-header h2 {
@@ -57,20 +54,20 @@
   border-radius: 8px; padding: 10px 15px; text-align: center; margin-top: 1rem;
 }
 
-/* --- SCROLLABLE LIST WRAPPER --- */
+
 .log-list-wrapper {
-  overflow-y: auto; /* This makes ONLY this section scrollable */
+  overflow-y: auto; 
   padding: 0 2.5rem;
-  flex-grow: 1; /* Allows this section to take up available space */
+  flex-grow: 1; 
 }
 
 .log-items-section h3 {
   font-size: 1.2rem;
   color: #34495e;
   margin-bottom: 1rem;
-  position: sticky; /* Makes the "Logged Items" header stick to the top of the scroll area */
+  position: sticky; 
   top: 0;
-  background-color: rgba(255, 255, 255, 0.85); /* Gives it a background so text doesn't overlap */
+  background-color: rgba(255, 255, 255, 0.85); 
   padding-top: 1rem;
   padding-bottom: 0.5rem;
   z-index: 1;
@@ -82,7 +79,7 @@
   background-color: #f8f9fa; border-radius: 10px; margin-bottom: 0.75rem;
   border-left: 5px solid #28a745;
 }
-/* ... other log item styles are the same ... */
+
 .log-item-details { flex-grow: 1; }
 .log-item-details span { font-size: 1.1rem; }
 .item-quantity { font-size: 0.9rem; color: #7f8c8d; margin-left: 8px; }
@@ -99,16 +96,16 @@
     font-style: italic;
 }
 
-/* --- STICKY FOOTER --- */
+
 .log-footer {
-  padding: 0; /* Padding is handled by the child */
-  flex-shrink: 0; /* Prevents footer from shrinking */
+  padding: 0; 
+  flex-shrink: 0; 
 }
 .total-calories {
   padding: 1.25rem 2.5rem;
   border-top: 2px solid #e0e0e0;
   text-align: right;
   background-color: #f1f8e9;
-  border-radius: 0 0 16px 16px; /* Match the main card's corners */
+  border-radius: 0 0 16px 16px; 
 }
 .total-calories h3 { margin: 0; color: #1b5e20; font-size: 1.5rem; }

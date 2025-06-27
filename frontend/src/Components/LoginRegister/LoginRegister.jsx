@@ -43,20 +43,18 @@ export const LoginRegister = () => {
     e.preventDefault();
     setError('');
     try {
-      // Step 1: Register the user (this part is correct)
+      //  Register the user 
       await axios.post(`${API_BASE_URL}/api/users/register`, {
         username: regUsername,
         email: regEmail,
         password: regPassword,
       });
 
-      // Step 2: Automatically log the user in after successful registration
+      //  Automatically log the user in after successful registration
       const formData = new URLSearchParams();
       formData.append('username', regUsername);
       formData.append('password', regPassword);
 
-      // --- THIS IS THE CORRECTED LINE ---
-      // We must include the headers, just like in the handleLogin function.
       const response = await axios.post(`${API_BASE_URL}/api/users/login`, formData, {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       });
@@ -73,7 +71,7 @@ export const LoginRegister = () => {
   const registerLink = (e) => { e.preventDefault(); setAction('active'); setError(''); };
   const loginLink = (e) => { e.preventDefault(); setAction(''); setError(''); };
 
-  // The rest of your JSX remains exactly the same...
+  
   return (
     <>
       <div className="login-wrapper">

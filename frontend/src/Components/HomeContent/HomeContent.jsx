@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
-import './HomeContent.css'; // This will use the corrected CSS file below
+import './HomeContent.css'; 
 import bg from "../Assets/ketogenic-low-carbs-diet-concept-ingredients-healthy-foods-selection-set-up-white-concrete-background_35641-4032.avif";
 
 const API_BASE_URL = "http://127.0.0.1:8000";
@@ -28,7 +28,7 @@ export default function HomeContent() {
     const navigate = useNavigate();
     const { user, updateUserProfile } = useAuth();
 
-    // This local state manages the form for a smooth UX, populated by the global user state
+   
     const [localProfile, setLocalProfile] = useState({ age: '', weight: '', height: '', sex: 'male', activity_level: 'light' });
     const [recommendations, setRecommendations] = useState({});
     const [caloriesConsumed, setCaloriesConsumed] = useState(0);

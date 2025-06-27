@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { useAuth } from '../../contexts/AuthContext'; // Import useAuth to get token
-import './DailyLog.css'; // Make sure you have a corresponding CSS file
+import './DailyLog.css'; 
 
 const API_BASE_URL = "http://127.0.0.1:8000";
 
@@ -10,7 +10,7 @@ export default function DailyLog() {
     const [foodName, setFoodName] = useState('');
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-    const { token } = useAuth(); // Get the token from our global context
+    const { token } = useAuth(); 
 
     const today = new Date().toISOString().split('T')[0];
 

@@ -1,24 +1,23 @@
-/* --- This styles the root container for the login page --- */
+
 .login-wrapper {
   width: 100vw;
-  height: 100vh; /* Use height instead of min-height to prevent overflow */
+  height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  box-sizing: border-box; /* Important for preventing scrollbars */
-  overflow: hidden; /* Hide any accidental overflow */
+  box-sizing: border-box; 
+  overflow: hidden; 
 
-  /* --- UPDATE THIS PATH to your desired background image --- */
   background: url('../Assets/healthy-unhealthy-food-background-fruits-600nw-1761913922.webp');
   
   background-size: cover;
   background-position: center;
   font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-  position: relative; /* Needed for the footer positioning */
+  position: relative; 
 }
 
-/* --- The "Glassmorphism" Form Wrapper --- */
+
 .wrapper {
   position: relative;
   width: 100%;
@@ -34,7 +33,7 @@
   transition: height 0.3s ease-in-out;
 }
 
-/* Set heights for login vs register form */
+
 .wrapper { height: 450px; }
 .wrapper.active { height: 520px; }
 
@@ -56,7 +55,7 @@
 .wrapper .form-box.register { transform: translateX(100%); }
 .wrapper.active .form-box.register { transform: translateX(0); }
 
-/* --- Styling for elements INSIDE the form --- */
+
 .form-box h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -133,13 +132,13 @@ button[type="submit"]:hover {
 }
 .register-link p a:hover { text-decoration: underline; }
 
-/* --- "NutriScan" Footer --- */
+
 .footer {
-  /* --- This is the key change for centering --- */
+ 
   position: absolute;
   bottom: 20px;
-  left: 50%; /* Position the left edge at the 50% mark of the screen */
-  transform: translateX(-50%); /* Pull it back to the left by half of its own width */
+  left: 50%; 
+  transform: translateX(-50%); 
   
   color: #fff;
   font-size: 1.5rem;

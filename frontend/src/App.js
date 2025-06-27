@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from './contexts/AuthContext';
 
-// --- Import all your page components ---
+// --- Import components ---
 import { LoginRegister } from "./Components/LoginRegister/LoginRegister";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import HomeContent from "./Components/HomeContent/HomeContent";
@@ -11,8 +11,7 @@ import DailyLog from "./Components/DailyLog/DailyLog";
 import Summary from "./Components/Summary/Summary";
 import Tips from "./Components/Tips/Tips";
 
-// --- Import the global stylesheet ---
-// This line connects the CSS rules to your application.
+
 import './App.css';
 
 // --- This component protects routes that require a user to be logged in ---
@@ -20,15 +19,14 @@ const ProtectedRoute = ({ children }) => {
     const { user, isLoading } = useAuth();
 
     if (isLoading) {
-        // You can add a more sophisticated loading spinner here later
+       
         return <div>Loading Application...</div>;
     }
 
     return user ? children : <Navigate to="/login" />;
 };
 
-// --- This is the main layout of your app when logged in ---
-// It now uses CSS classes instead of inline styles.
+
 const AppLayout = () => {
     return (
         <div className="app-layout"> {/* <-- This class styles the flex container */}

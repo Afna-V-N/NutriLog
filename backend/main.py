@@ -1,9 +1,4 @@
-# ======================================================================
-#  FINAL, COMPLETE & SECURE main.py
-#  (Integrates User Authentication with All Application Features)
-# ======================================================================
 
-# --- Standard Library Imports ---
 import os
 import sqlite3
 import random

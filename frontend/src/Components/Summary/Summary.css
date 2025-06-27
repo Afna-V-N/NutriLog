@@ -1,23 +1,19 @@
-/* ===================================================================
-   FINAL, ROBUST CSS for Summary.js with a Fixed-Height Card
-   =================================================================== */
 
-/* This centers the card on the page */
 .page-container {
   width: 100%;
   padding: 2rem;
   box-sizing: border-box;
   display: grid;
-  place-items: center; /* A shorthand to perfectly center the child */
+  place-items: center; 
 }
 
-/* --- Main "Glassmorphism" Card --- */
+
 .summary-container {
   max-width: 900px;
   width: 100%;
   
-  /* --- KEY 1: Define a fixed height for the card --- */
-  height: 88vh; /* 88% of the viewport height */
+  
+  height: 88vh; 
   
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
@@ -26,17 +22,17 @@
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.4);
   
-  /* --- KEY 2: Use Flexbox to structure the content vertically --- */
+ 
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* This is important to contain the rounded corners */
+  overflow: hidden; 
 }
 
-/* --- The NON-SCROLLING Header Area --- */
+
 .summary-header {
   padding: 1.5rem 2.5rem;
   border-bottom: 1px solid #e0e0e0;
-  flex-shrink: 0; /* KEY 3: Prevents this section from shrinking */
+  flex-shrink: 0; 
 }
 
 .summary-title {
@@ -62,22 +58,21 @@
   font-weight: 500;
 }
 
-/* --- THE SCROLLABLE CHARTS AREA --- */
+
 .charts-area {
-  /* --- KEY 4: This makes ONLY this section scrollable --- */
   overflow-y: auto; 
-  flex-grow: 1; /* Allows this section to take up all remaining vertical space */
+  flex-grow: 1; 
   padding: 1.5rem 2.5rem;
 }
 
-/* Customize the scrollbar for a better look (optional) */
+
 .charts-area::-webkit-scrollbar { width: 8px; }
 .charts-area::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
 .charts-area::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
 .charts-area::-webkit-scrollbar-thumb:hover { background: #aaa; }
 
 
-/* --- Styles for the content inside the scrollable area --- */
+
 .chart-container {
   background-color: #ffffff;
   border-radius: 16px;

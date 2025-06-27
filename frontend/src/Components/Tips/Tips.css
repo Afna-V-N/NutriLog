@@ -1,28 +1,26 @@
-/* ===================================================================
-   Modern and Attractive CSS for the Tips.js Component
-   =================================================================== */
+
 
 .tips-page-container {
-  padding: 2rem 3rem; /* Consistent padding with HomeContent */
-  max-width: 900px; /* Limits the width for better readability on wide screens */
-  margin: 0 auto; /* Centers the container horizontally */
+  padding: 2rem 3rem; 
+  max-width: 900px; 
+  margin: 0 auto; 
 }
 
-/* --- Main "Glassmorphism" Card --- */
+
 .tips-container {
-  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.85); 
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* For Safari */
+  -webkit-backdrop-filter: blur(12px); 
   border-radius: 20px;
   padding: 2rem 2.5rem;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-/* --- Header Styling --- */
+
 .tips-container h2 {
   text-align: center;
-  color: #2c3e50; /* Dark, professional blue-grey */
+  color: #2c3e50; 
   font-size: 2rem;
   font-weight: 600;
   margin-top: 0;
@@ -33,12 +31,12 @@
   gap: 0.75rem; /* Space between icon and text */
 }
 
-/* --- List Styling --- */
+
 .tips-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  counter-reset: tips-counter; /* Initialize a counter for the numbers */
+  counter-reset: tips-counter; 
 }
 
 /* --- Individual Tip Item Styling --- */
@@ -61,17 +59,16 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* --- Automatic Numbering --- */
+
 .tip-item::before {
-  counter-increment: tips-counter; /* Increase the counter for each item */
-  content: counter(tips-counter) "."; /* Display the counter value with a dot */
+  counter-increment: tips-counter; 
+  content: counter(tips-counter) "."; 
   font-weight: 700;
   font-size: 1.2rem;
   margin-right: 1rem;
-  color: #689f38; /* Match the border color */
-  min-width: 25px; /* Ensures consistent alignment */
-}
-
+  color: #689f38; 
+  min-width: 25px; 
+} 
 
 /* --- Loading & Error Messages --- */
 .loading-message,
