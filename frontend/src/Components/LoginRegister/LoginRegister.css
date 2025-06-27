@@ -1,0 +1,148 @@
+/* --- This styles the root container for the login page --- */
+.login-wrapper {
+  width: 100vw;
+  height: 100vh; /* Use height instead of min-height to prevent overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box; /* Important for preventing scrollbars */
+  overflow: hidden; /* Hide any accidental overflow */
+
+  /* --- UPDATE THIS PATH to your desired background image --- */
+  background: url('../Assets/healthy-unhealthy-food-background-fruits-600nw-1761913922.webp');
+  
+  background-size: cover;
+  background-position: center;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  position: relative; /* Needed for the footer positioning */
+}
+
+/* --- The "Glassmorphism" Form Wrapper --- */
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  color: #1a1a1a;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+/* Set heights for login vs register form */
+.wrapper { height: 450px; }
+.wrapper.active { height: 520px; }
+
+/* The sliding form box */
+.wrapper .form-box {
+  position: absolute;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Animation logic */
+.wrapper .form-box.login { transform: translateX(0); }
+.wrapper.active .form-box.login { transform: translateX(-100%); }
+.wrapper .form-box.register { transform: translateX(100%); }
+.wrapper.active .form-box.register { transform: translateX(0); }
+
+/* --- Styling for elements INSIDE the form --- */
+.form-box h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.form-box form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box {
+  position: relative;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(238, 245, 255, 0.8);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #1a1a1a;
+  padding: 0 45px 0 20px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: #777;
+}
+
+button[type="submit"] {
+  width: 90%;
+  height: 50px;
+  background: #007bff;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+/* --- Links and Error Styling --- */
+.register-link {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 25px;
+}
+.register-link p a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover { text-decoration: underline; }
+
+/* --- "NutriScan" Footer --- */
+.footer {
+  /* --- This is the key change for centering --- */
+  position: absolute;
+  bottom: 20px;
+  left: 50%; /* Position the left edge at the 50% mark of the screen */
+  transform: translateX(-50%); /* Pull it back to the left by half of its own width */
+  
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}

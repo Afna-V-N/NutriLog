@@ -1,0 +1,114 @@
+/* ===================================================================
+   Modern CSS for DailyLog.js with STICKY HEADER
+   =================================================================== */
+
+.page-container {
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* --- Main Card --- */
+.log-container {
+ max-width: 900px; /* CHANGED FROM 800px to 900px */
+  width: 200%;
+  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+ 
+}
+
+/* --- STICKY HEADER --- */
+.log-header {
+  padding: 2rem 2.5rem 1.5rem;
+  flex-shrink: 0; /* Prevents the header from shrinking */
+}
+
+.log-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+.date-picker-wrapper {
+    display: flex; justify-content: center; align-items: center;
+    gap: 10px; margin-bottom: 1.5rem;
+}
+.log-input-form { display: flex; }
+.log-input-form input {
+  flex-grow: 1; padding: 0.9rem 1.2rem; border: 1px solid #ccc;
+  border-right: none; border-radius: 8px 0 0 8px;
+  font-size: 1rem; outline: none;
+}
+.log-input-form button {
+  padding: 0.9rem 1.5rem; background-color: #28a745; color: white;
+  border: 1px solid #28a745; border-radius: 0 8px 8px 0;
+  cursor: pointer; font-size: 1rem; font-weight: 600;
+}
+.log-error {
+  color: #c0392b; background-color: #fbe9e7; border: 1px solid #e74c3c;
+  border-radius: 8px; padding: 10px 15px; text-align: center; margin-top: 1rem;
+}
+
+/* --- SCROLLABLE LIST WRAPPER --- */
+.log-list-wrapper {
+  overflow-y: auto; /* This makes ONLY this section scrollable */
+  padding: 0 2.5rem;
+  flex-grow: 1; /* Allows this section to take up available space */
+}
+
+.log-items-section h3 {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 1rem;
+  position: sticky; /* Makes the "Logged Items" header stick to the top of the scroll area */
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* Gives it a background so text doesn't overlap */
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  z-index: 1;
+}
+
+.log-list { list-style-type: none; padding: 0; margin: 0; }
+.log-item {
+  display: flex; align-items: center; padding: 1rem;
+  background-color: #f8f9fa; border-radius: 10px; margin-bottom: 0.75rem;
+  border-left: 5px solid #28a745;
+}
+/* ... other log item styles are the same ... */
+.log-item-details { flex-grow: 1; }
+.log-item-details span { font-size: 1.1rem; }
+.item-quantity { font-size: 0.9rem; color: #7f8c8d; margin-left: 8px; }
+.log-item-calories { font-weight: 600; color: #e67e22; min-width: 100px; text-align: right; margin: 0 1rem; }
+.delete-btn {
+  background: none; border: none; color: #e74c3c; font-size: 1.4rem;
+  cursor: pointer; padding: 0; border-radius: 50%; width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+}
+.no-items-message {
+    text-align: center;
+    padding: 3rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* --- STICKY FOOTER --- */
+.log-footer {
+  padding: 0; /* Padding is handled by the child */
+  flex-shrink: 0; /* Prevents footer from shrinking */
+}
+.total-calories {
+  padding: 1.25rem 2.5rem;
+  border-top: 2px solid #e0e0e0;
+  text-align: right;
+  background-color: #f1f8e9;
+  border-radius: 0 0 16px 16px; /* Match the main card's corners */
+}
+.total-calories h3 { margin: 0; color: #1b5e20; font-size: 1.5rem; }

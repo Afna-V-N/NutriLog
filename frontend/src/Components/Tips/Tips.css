@@ -1,0 +1,88 @@
+/* ===================================================================
+   Modern and Attractive CSS for the Tips.js Component
+   =================================================================== */
+
+.tips-page-container {
+  padding: 2rem 3rem; /* Consistent padding with HomeContent */
+  max-width: 900px; /* Limits the width for better readability on wide screens */
+  margin: 0 auto; /* Centers the container horizontally */
+}
+
+/* --- Main "Glassmorphism" Card --- */
+.tips-container {
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* For Safari */
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* --- Header Styling --- */
+.tips-container h2 {
+  text-align: center;
+  color: #2c3e50; /* Dark, professional blue-grey */
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem; /* Space between icon and text */
+}
+
+/* --- List Styling --- */
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: tips-counter; /* Initialize a counter for the numbers */
+}
+
+/* --- Individual Tip Item Styling --- */
+.tip-item {
+  background-color: #f1f8e9; /* A very light, pleasant green */
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #689f38; /* A stronger, darker green border */
+  border-radius: 12px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.tip-item:hover {
+  transform: scale(1.02); /* Slightly enlarges the tip on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Automatic Numbering --- */
+.tip-item::before {
+  counter-increment: tips-counter; /* Increase the counter for each item */
+  content: counter(tips-counter) "."; /* Display the counter value with a dot */
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: #689f38; /* Match the border color */
+  min-width: 25px; /* Ensures consistent alignment */
+}
+
+
+/* --- Loading & Error Messages --- */
+.loading-message,
+.error-message {
+  text-align: center;
+  color: #555;
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 3rem 0;
+}
+
+.error-message {
+    color: #c0392b; /* A soft red for errors */
+}

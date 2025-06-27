@@ -1,0 +1,183 @@
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+
+
+/* === MAIN FORM CONTAINER === */
+.food-input-container {
+  width: 90%; /* Responsive on smaller screens */
+  max-width: 500px; /* Reduced width for elegance */
+  margin: 2rem auto; /* Top spacing and center horizontally */
+  max-height: 200pxS;
+  background: rgba(255, 255, 255, 0.9); /* Softer glassmorphism */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  
+  border-radius: 24px; /* Smoother corners */
+  padding: 2.5rem 3rem;
+  
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* Softer depth */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+
+/* === TITLE STYLING === */
+.food-input-container h2 {
+  font-size: 2rem;                    /* Bigger font */
+  font-weight: 600;                   /* Semi-bold */
+  color: #2c3e50;                     /* Dark gray text */
+  margin: 0 0 1.5rem 0;               /* Bottom spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;                       /* Emoji gap */
+}
+
+/* === SEARCH BAR STYLING === */
+.input-group {
+  display: flex;                      /* Horizontal layout for input and button */
+  
+}
+.input-group input[type="text"] {
+  flex-grow: 1;                       /* Expand to available space */
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;         /* Rounded only on left side */
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.input-group input[type="text"]:focus {
+  border-color: #2ecc71;
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+}
+.input-group button {
+  padding: 0.9rem 1.5rem;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;         /* Rounded only on right side */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+.input-group button:hover {
+  background-color: #27ae60;
+}
+
+/* === OR DIVIDER === */
+.or-divider {
+  margin: 0.5rem 0;
+  color: #7f8c8d;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* === CUSTOM FILE UPLOAD BUTTON === */
+input[type="file"] {
+  display: none;
+}
+.file-upload-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.8rem;
+  background-color: #34495e;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.file-upload-label:hover {
+  background-color: #2c3e50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.file-upload-label.disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* === PLACEHOLDER TEXT, ERRORS === */
+.loading-text, .error-text, .placeholder-text {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  padding: 2rem;
+  background: #f0f0f0;
+  border-radius: 12px;
+}
+.error-text {
+  color: #c0392b;
+  background-color: #fbe9e7;
+  border: 1px solid #e74c3c;
+}
+
+/* === IMAGE PREVIEW === */
+.preview-image {
+  margin: 1rem auto;
+  display: block;
+  max-width: 100%;
+  max-height: 450px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* === RESULTS SECTION === */
+.result-card {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 16px;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.result-image {
+  width: 100%;
+  height: 250px;          /* 🔁 Change this to a larger value */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.result-card h3 {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+  color: #16a085;
+}
+
+/* === NUTRIENT GRID === */
+.nutrients-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.nutrients-grid p {
+  margin: 0;
+  padding: 0.75rem;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.nutrients-grid p strong {
+  color: #34495e;
+}

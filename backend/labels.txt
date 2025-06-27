@@ -1,0 +1,4 @@
+0 apple
+1 milk
+2 butter chicken
+3 eggs
